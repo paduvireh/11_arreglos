@@ -16,6 +16,18 @@ int main(){
         cout<<"- Dia "<<dia[i]<<": "<<tempMed[i]<<" C"<<endl;
     }
 
+    float menor=tempMin[0];
+    string dmen=dia[0];
+    
+    for(int i=1; i<7; i++){
+        if(tempMin[i]<menor){
+            menor=tempMin[i];
+            dmen=dia[i];
+        }
+    }
+    cout<<"\nDIA CON MENOR TEMPERATURA: "<<endl;
+    cout<<"El dia con la menor temperatura registrada fue el dia "<<dmen<<" con "<<menor<<" C"<<endl;
+
     return 0;
 }
 
