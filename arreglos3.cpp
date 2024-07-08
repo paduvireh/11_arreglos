@@ -28,6 +28,23 @@ int main(){
     cout<<"\nDIA CON MENOR TEMPERATURA: "<<endl;
     cout<<"El dia con la menor temperatura registrada fue el dia "<<dmen<<" con "<<menor<<" C"<<endl;
 
+	float temp;
+	int coincide=0;
+	cout<<"\nBUSCAR UNA TEMPERATURA MAXIMA QUE COINCIDA: "<<endl;
+    cout<<"Ingrese una temperatura maxima a buscar: "; cin>>temp;
+    cout<<"Dias con temperatura maxima de "<<temp<<" C: ";
+    	
+    for(int i=0; i<7; i++){
+        if(tempMax[i]==temp){
+            cout<<dia[i]<<" ";
+            coincide++;
+        }
+    }
+    
+	if(coincide==0)
+        cout<<"No existen dias con esa temperatura maxima registrada."<<endl;
+    
+	cout<<endl;
     return 0;
 }
 
