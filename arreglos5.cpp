@@ -18,6 +18,28 @@ int main(){
     for(int i=0; i<nPG; i++){
         cout<<"Ingrese el nombre del estudiante #"<<i+1<<" en PG: "; cin>>PG[i];
     }
+    
+    string comunes[nFP+nPG];
+    int nC=0;
+
+    for(int i=0; i<nFP; i++){
+        for(int j=0; j<nPG; j++){
+            if(FP[i]==PG[j]){
+                comunes[nC]=FP[i];
+                nC++;
+            }
+        }
+    }
+
+    if(nC>0){
+        cout<<"\nExisten "<<nC<<" estudiantes en ambas clases: "<<endl;
+        for(int i=0; i<nC; i++){
+            cout<<"- "<<comunes[i]<<endl;
+        }
+        cout<<endl;
+        
+    } else
+        cout<<"\nNo existen estudiantes en ambas clases."<<endl;
 
     return 0;
 }
