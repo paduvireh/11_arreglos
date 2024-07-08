@@ -10,7 +10,10 @@ void multiplos(int A[], int n, int num){
 int main(){
     int n, num;
     
-    cout<<"Ingrese el tamano del arreglo: "; cin>>n;
+    do{
+        cout<<"Ingrese el tamano del arreglo: "; cin>>n;
+    } while(n<=0);
+    
     int A[n];
     cout<<"Ingrese un numero: "; cin>>num;
     
